@@ -1,8 +1,10 @@
 {
-  "name": "APPNAME",
+  "name": "recorder",
   "version": "0.0.1",
   "dependencies": {
-    "component/emitter":"*"
+    "component/emitter":"*",
+    "adamsanderson/trigger-event":"*",
+    "Contra/whammy":"*"
   },
   "main": "dist/main.js",
   "scripts": [

@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/recorder.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>recorder</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Record video tags and media streams</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -18,13 +18,31 @@
 
 ## Usage
 
+All output is WebM for now.
+
 ```coffee-script
-NOTHING HERE YET
+# el can be a jquery element or vanilla el
+el = $("#video")
+
+# frameRate defaults to 32 - max is 60
+controls = recorder(el, frameRate)
+
+# start collecting frames - call this when video starts playing
+controls.start()
+
+# stops frame collection
+controls.stop()
+
+controls.toDataURL (err, uri) ->
+controls.toBlob (err, blob) ->
+
+# save the blob to the file system - filename defaults to recording.webm
+controls.save(filename)
 ```
 
 ## Examples
 
-You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+You can view more examples in the [example folder.](https://github.com/wearefractal/recorder/tree/master/examples)
 
 ## LICENSE
 

@@ -1,8 +1,8 @@
-APPNAME = require '../'
+recorder = require '../'
 should = require 'should'
 require 'mocha'
 
-describe 'APPNAME', ->
+describe 'recorder', ->
   describe 'FUNCTIONNAME()', ->
     it 'should TASKNAME', (done) ->
       should.exist true
